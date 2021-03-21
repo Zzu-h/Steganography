@@ -1,0 +1,26 @@
+#pragma once
+
+#include "pch.h"
+#include "bmpHeader.h"
+
+class decoding{
+private:
+	bmpHeader SteganoBmpHeader;
+	ifstream SteganoBmp;
+
+	const char* path;
+
+	// String data to be setganography
+	char output[MAX_LEN + 1];
+
+	size_t rowSize = 0;		// row의 크기
+	size_t heightSize = 0;	// height의 크기
+	size_t paddingSize = 0;	// 한 row당 padding의 크기
+	int paddingOffset = 0;	// 데이터 시작부터 padding까지의 옵셋
+	size_t vacancy = 0;		// bmp 파일에서 데이터를 입력할 수 있는 빈 공간의 크기.
+
+	void calForDecoding();
+public:
+	decoding(const char*);
+	errno_t doDecoding(char*);
+};
