@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 		encoding encode("origin.bmp", "12171678_stego.bmp");
 		char inputStr[MAX_LEN + 1];
 
-		cout << "Please insert the text \n";
+		cout << "Please insert the text \n↓\n";
 		cin.getline(inputStr, MAX_LEN);
 
 		// doEncoding 함수 호출. 반드시 입력할 문자열을 함께 넘길 것. 크기는 MAX_LEN으로
