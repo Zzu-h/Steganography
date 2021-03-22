@@ -42,8 +42,6 @@ errno_t decoding::doDecoding(char* outputStr){
 }
 
 void decoding::calForDecoding(){
-	SteganoBmpHeader.readHeader();
-
 	rowSize = (((float)SteganoBmpHeader.getBiWidth() * (float)SteganoBmpHeader.getBiBitCount() + 31) / 32) * 4;
 	paddingOffset = SteganoBmpHeader.getBiWidth() * SteganoBmpHeader.getBiBitCount() / 8;
 	paddingSize = rowSize - paddingOffset;

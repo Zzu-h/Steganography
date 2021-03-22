@@ -19,7 +19,7 @@ errno_t encoding::doEncoding(const char* inputStr){
 		return 1;
 	}
 
-	if (copyBmp())
+	if (bmpCopy())
 		return 1;
 	
 
@@ -52,7 +52,7 @@ errno_t encoding::doEncoding(const char* inputStr){
 	return 0;
 }
 
-errno_t encoding::copyBmp(){
+errno_t encoding::bmpCopy(){
 	if (!origin.is_open() || !target.is_open()) {
 		cout << "Copy Fail." << endl;
 		return 1;
@@ -83,8 +83,6 @@ errno_t encoding::copyBmp(){
 }
 
 void encoding::calForEncoding() {
-	originBmpHeader.readHeader();
-
 	// encoding에 필요한 값들 계산
 	rowSize = (((float)originBmpHeader.getBiWidth() * (float)originBmpHeader.getBiBitCount() + 31) / 32) * 4;
 	paddingOffset = originBmpHeader.getBiWidth() * originBmpHeader.getBiBitCount() / 8;

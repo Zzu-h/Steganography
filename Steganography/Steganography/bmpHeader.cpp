@@ -1,32 +1,7 @@
 #include "bmpHeader.h"
 
 bmpHeader::bmpHeader(const string& _path) :path(_path){
-	//BMP File Header
 
-	bfType = 0;
-	bfSize = 0;
-	bfReserved1 = 0;
-	bfReserved2 = 0;
-	bfOffBits = 0;
-
-	//BMP Image Header
-
-	biSize = 0;
-	biWidth = 0;
-	biHeight = 0;
-	biPlanes = 0;
-	biBitCount = 0;
-	biCompression = 0;
-	biSizeImage = 0;
-	biXPelsPerMeter = 0;
-	biYPelsPerMeter = 0;
-	biClrUsed = 0;
-	biClrImportant = 0;
-
-	isRead = false;
-}
-
-void bmpHeader::readHeader(){
 	bmpImage.open(path, ios::in | ios::binary);
 
 	if (!bmpImage.is_open()) {

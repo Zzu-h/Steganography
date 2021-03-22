@@ -90,8 +90,6 @@ public:
 	bmpHeader() = delete;
 	const bool is_open() { return bmpImage.is_open(); }
 	const bool is_read() { return isRead; }
-	void readHeader();
-
 
 	//BMP File Header
 

@@ -28,7 +28,7 @@ private:
 	int paddingOffset = 0;	// 데이터 시작부터 padding까지의 옵셋
 	size_t vacancy = 0;		// bmp 파일에서 데이터를 입력할 수 있는 빈 공간의 크기.
 
-	errno_t copyBmp();
+	errno_t bmpCopy();
 	void calForEncoding();
 public:
 	encoding(const char*, const char*);
