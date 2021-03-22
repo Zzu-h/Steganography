@@ -148,7 +148,6 @@
     <ClInclude Include="bmpHeader.h" />
     <ClInclude Include="decoding.h" />
     <ClInclude Include="encoding.h" />
-    <ClInclude Include="pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

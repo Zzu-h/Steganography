@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "encoding.h"
 
 encoding::encoding(const char* _origin, const char* _target)

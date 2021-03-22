@@ -1,7 +1,12 @@
 #pragma once
 
-#include "pch.h"
+#include<iostream>
+#include<fstream>
 #include "bmpHeader.h"
+
+# define MAX_LEN 2048
+
+using namespace std;
 
 class decoding{
 private:

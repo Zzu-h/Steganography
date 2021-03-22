@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "bmpHeader.h"
 
 bmpHeader::bmpHeader(const string& _path) :path(_path){

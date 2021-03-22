@@ -1,9 +1,8 @@
-#include "pch.h"
 #include "decoding.h"
 
-decoding::decoding(const char* _path)
-	:SteganoBmpHeader(_path) {
-	this->path = _path;
+decoding::decoding(const char* stegoPath)
+	:SteganoBmpHeader(stegoPath) {
+	this->path = stegoPath;
 }
 errno_t decoding::doDecoding(char* outputStr){
 
